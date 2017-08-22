@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="admin.login.definition"	template="/WEB-INF/views/tiles/base/login-layout.jsp">
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name="admin.definition"	template="/WEB-INF/views/tiles/base/layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/tiles/base/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/tiles/base/footer.jsp" />
+	</definition>
+	
+	<definition name="user.definition"	template="/WEB-INF/views/tiles/base/layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/tiles/base/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/tiles/base/footer.jsp" />
+	</definition>
+
+	<definition name="default" extends="admin.login.definition">
+		<put-attribute name="title" value="Index" />
+		<put-attribute name="body" value="/WEB-INF/views/tiles/index.jsp" /> 
+	</definition>
+	
+	<definition name="login" extends="admin.login.definition">
+		<put-attribute name="body" value="/WEB-INF/views/tiles/login.jsp" /> 
+	</definition>
+	 
+	<definition name="register" extends="admin.login.definition">
+		<put-attribute name="body" value="/WEB-INF/views/tiles/register.jsp" /> 
+	</definition>
+	 
+	 <definition name="admin.home" extends="admin.definition">
+		<put-attribute name="title" value="Home" />
+		<put-attribute name="body" value="/WEB-INF/views/tiles/admin/admin.jsp" />
+	</definition>
+	
+	 
+	<definition name="home" extends="user.definition">
+		<put-attribute name="title" value="Home" />
+		<put-attribute name="body" value="/WEB-INF/views/tiles/home/home.jsp" />
+	</definition>
+	
+	<definition name="user.profile" extends="user.definition">
+		<put-attribute name="title" value="Profile" />
+		<put-attribute name="body" value="/WEB-INF/views/tiles/user/profile.jsp" />
+	</definition>
+	
+	<definition name="user.details" extends="user.definition">
+		<put-attribute name="title" value="Profile" />
+		<put-attribute name="body" value="/WEB-INF/views/tiles/user/user-list.jsp" />
+	</definition>
+	<definition name="site.details" extends="user.definition">
+		<put-attribute name="title" value="Profile" />
+		<put-attribute name="body" value="/WEB-INF/views/tiles/user/site-list.jsp" />
+	</definition>
+	<definition name="service.provider" extends="user.definition">
+		<put-attribute name="title" value="Profile" />
+		<put-attribute name="body" value="/WEB-INF/views/tiles/user/service-provider-list.jsp" />
+	</definition>
+	
+	<definition name="asset.details" extends="user.definition">
+		<put-attribute name="title" value="Profile" />
+		<put-attribute name="body" value="/WEB-INF/views/tiles/user/asset-list.jsp" />
+	</definition>
+	
+	
+</tiles-definitions>
